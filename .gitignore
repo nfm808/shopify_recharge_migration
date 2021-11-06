@@ -1,7 +1,5 @@
 #files for processing
-finalExport/*
-productExport/*
-rechargeTemplate/*
+
 
 # Logs
 logs
