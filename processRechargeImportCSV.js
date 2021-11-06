@@ -3,7 +3,7 @@ const fs = require("fs");
 const csvJson = require("csvtojson");
 const { Parser } = require("json2csv");
 
-// paths to csv to work with
+// paths to the csv to work with
 const rechargeImportFilePath =
 	"./rechargeTemplate/Recharge-migration-Malama-Mushrooms.csv";
 const shopifyProductsFilePath = "./productExport/products.csv";
@@ -38,7 +38,9 @@ async function processRechargeCSV() {
 			external_variant_id,
 		} = customer;
 
-		// normalize the data to oz instead of oz.
+		// Insert your particular business data cleanup rules here
+
+		// clean the data to oz instead of oz.
 		if (external_variant_name[external_variant_name.length - 1] === ".") {
 			external_variant_name = external_variant_name.slice(
 				0,
@@ -111,6 +113,9 @@ async function processRechargeCSV() {
 			}
 		}
 	}
+
+	// end data cleanup rules
+
 	// reformat the data to csv and write to file in finalExport dir
 	const json2csvParser = new Parser();
 	const csv = json2csvParser.parse(rechargeJson);
