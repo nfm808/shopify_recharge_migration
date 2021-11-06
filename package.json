@@ -1,0 +1,18 @@
+{
+	"name": "product_id_extract",
+	"version": "1.0.0",
+	"description": "Extract Product and Variant Id from Shopify API",
+	"main": "index.js",
+	"scripts": {
+		"pull": "node index.js",
+		"process": "node processRechargeImportCSV.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.24.0",
+		"csvtojson": "^2.0.10",
+		"dotenv": "^10.0.0",
+		"json2csv": "^5.0.6"
+	}
+}
