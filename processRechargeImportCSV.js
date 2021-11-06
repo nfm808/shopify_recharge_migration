@@ -4,8 +4,7 @@ const csvJson = require("csvtojson");
 const { Parser } = require("json2csv");
 
 // paths to the csv to work with
-const rechargeImportFilePath =
-	"./rechargeTemplate/Recharge-migration-Malama-Mushrooms.csv";
+const rechargeImportFilePath = "./rechargeTemplate/recharge_template.csv";
 const shopifyProductsFilePath = "./productExport/products.csv";
 
 async function processRechargeCSV() {
